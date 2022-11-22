@@ -4,11 +4,11 @@
 #include <stdio.h>
 #include "Course.hpp"
 
-void setName(name) {
+void setName(char name) {
 
 }
 
-void setId(id) {
+void setId(int id) {
 
 }
 
