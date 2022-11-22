@@ -8,5 +8,4 @@ struct Student
     /* data */
     char name;
     int id;
-
 };
