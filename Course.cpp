@@ -6,11 +6,13 @@
 class Course {
 
 private:
+    std::string courseCode;
     float finalGrade;
-    float testGrade;
+    float testGrade1;
+    float testGrade2;
+    float testGrade3;
 
 public:
-    std::string courseCode;
 
     void setTest(int testNum, float grade) {
 
