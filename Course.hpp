@@ -8,6 +8,7 @@ struct Course
     std::string courseCode;
     float test1, test2, test3, exam;
     void setTest(int testNum, float grade);
+    void setCourseCode(std::string code);
     std::string getCourseCode();
     float overallGrade();
 };

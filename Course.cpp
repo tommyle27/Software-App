@@ -32,6 +32,10 @@ public:
 
     }
 
+    void setCourseCode(std::string code){
+        courseCode = code;
+    }
+
     std::string getCourseCode() {
         return courseCode;
     }
