@@ -5,6 +5,6 @@
 struct Course
 {
     /* data */
-    char name;
-    int id;
+    string courseCode[6];
+    float test1, test2, test3, exam;
 };
