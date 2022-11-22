@@ -6,6 +6,9 @@
 struct Student
 {
     /* data */
-    char name;
-    int id;
+    char name[20];
+    int id[9];
 };
+
+
+
