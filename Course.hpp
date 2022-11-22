@@ -5,12 +5,12 @@
 struct Course
 {
     /* data */
-    string courseCode;
+    std::string courseCode;
     float test1, test2, test3, exam;
-}
+};
 
 void setTest(int testNum, float grade);
 
-string getCourseCode();
+std::string getCourseCode();
 
 float overallGrade();

@@ -6,7 +6,7 @@
 struct Student
 {
     /* data */
-    string name;
+    std::string name;
     int id;
 };
 

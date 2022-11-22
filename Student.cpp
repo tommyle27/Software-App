@@ -7,11 +7,11 @@
 class Student {
 
 private: 
-    string studentName;
+    std::string studentName;
     int studentId;
 
 public: 
-    void setName(string name) {
+    void setName(std::string name) {
         studentName = name;
     }
 
@@ -27,4 +27,4 @@ public:
         return studentId;
     }
 
-}
+};

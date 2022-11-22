@@ -10,17 +10,17 @@ private:
     float testGrade;
 
 public:
-    string courseCode;
+    std::string courseCode;
 
     void setTest(int testNum, float grade) {
 
     }
 
-    string getCourseCode() {
+    std::string getCourseCode() {
 
     }
 
     float overallGrade() {
         
     }
-}
+};
