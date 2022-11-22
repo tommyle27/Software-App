@@ -33,7 +33,7 @@ public:
     }
 
     std::string getCourseCode() {
-
+        return courseCode;
     }
 
     float overallGrade() {
