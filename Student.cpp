@@ -6,20 +6,25 @@
 
 class Student {
 
-void setName(char name) {
-    
-}
+private: 
+    string studentName;
+    int studentId;
 
-void setId(int id) {
+public: 
+    void setName(string name) {
+        studentName = name;
+    }
 
-}
+    void setId(int id) {
+        studentId = id;
+    }
 
-std::string getName() {
+    std::string getName() {
+        return studentName;
+    }
 
-}
-
-int getId() {
-
-}
+    int getId() {
+        return studentId;
+    }
 
 }
