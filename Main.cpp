@@ -1,5 +1,7 @@
 /* cp317
 */
+#include <GL/glut.h>
+#include <stdio.h>
 #include "Student.hpp"
 #include "Course.hpp"
 
