@@ -3,6 +3,7 @@
 #include "Student.hpp"
 #include "Course.hpp"
 
-// testing testing hello world
-
-//Hello
+int main() {
+	std::cout << "Hello World!";
+	return 0
+}
