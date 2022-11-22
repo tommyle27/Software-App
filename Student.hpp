@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string>
 
-class Student
+struct Student
 {
     /* data */
     std::string name;
