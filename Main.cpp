@@ -4,16 +4,13 @@
 #include "Student.hpp"
 #include "Course.hpp"
 
-
-
-
 int main() {
-	std::cout << "Hello World!";
-	return 0;
+	Student test;
 
-// have open file code here: 
+	test.setName("Mitchell Mackay");
+	test.setId(200204510);
 
-
+	std::cout << test.getName();
 }
 
 //Hello
