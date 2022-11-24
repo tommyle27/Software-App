@@ -2,29 +2,27 @@
 #include <fstream>
 #include <iostream>
 #include <stdio.h>
-#include "Course.hpp"
+#include "Student.hpp"
 
-class Student {
+using namespace std;
 
-private: 
-    std::string studentName;
-    int studentId;
+Student::Student(string name, int id) {
+    studentName = name;
+    studentId = id;
+}
 
-public: 
-    void setName(std::string name) {
-        studentName = name;
-    }
+void Student::setName(string name) {
+    studentName = name;
+}
 
-    void setId(int id) {
-        studentId = id;
-    }
+void Student::setId(int id) {
+    studentId = id;
+}
 
-    std::string getName() {
-        return studentName;
-    }
+string Student::getName() {
+    return studentName;
+}
 
-    int getId() {
-        return studentId;
-    }
-
-};
+int Student::getId() {
+    return studentId;
+}
