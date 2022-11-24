@@ -8,7 +8,7 @@
 
 class Course
 {
-    /* data */
+    //Declare course variables and methods
     private:
         std::string courseCode;
         float test1, test2, test3, exam;

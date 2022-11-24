@@ -8,7 +8,7 @@
 
 class Student
 {
-    /* data */
+    //Declare student variables and methods
     private:
         std::string studentName;
         int studentId;

@@ -6,23 +6,21 @@
 
 using namespace std;
 
-string courseCode;
-float finalGrade;
-float testGrade1;
-float testGrade2;
-float testGrade3;
-
-void setTest(int testNum, float grade) {
+//Course Constructor
+void Course::setTest(int testNum, float grade) {
     if(testNum == 1){
-        testGrade1 = grade;
+        test1 = grade;
     }
     else if (testNum == 2)
     {
-        testGrade2 = grade;
+        test2 = grade;
     }
     else if (testNum == 3)
     {
-        testGrade3 = grade;
+        test3 = grade;
+    }
+    else if(testNum == 4) {
+        exam = grade;
     }
     else{
         std::cout << "Not a valid test number!";
@@ -30,14 +28,17 @@ void setTest(int testNum, float grade) {
 
 }
 
-void setCourseCode(string code){
+//Sets course code
+void Course::setCourseCode(string code){
     courseCode = code;
 }
 
-string getCourseCode() {
+//Returns course code
+string Course::getCourseCode() {
     return courseCode;
 }
 
-float overallGrade() {
-    return 0;
+//Calculates and returns final weight grade
+float Course::overallGrade() {
+    return (test1 * 0.2) + (test2 * 0.2) + (test3 * 0.2) + (exam * 0.4);
 }
