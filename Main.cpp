@@ -77,6 +77,7 @@ int main() {
 		Course tempCourse = students[count].courseData.pop();
 		while(tempCourse.getCourseCode() != "") {
 			cout << tempCourse.getCourseCode() << "\n";
+			cout << tempCourse.overallGrade() << "\n";
 			tempCourse = students[count].courseData.pop();
 		}
 		count = count + 1;
