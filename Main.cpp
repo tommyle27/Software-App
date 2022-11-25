@@ -37,6 +37,9 @@ int main() {
 			result[1] = result[1].substr(1, result[1].length());
 			students[count].setName(result[1]);
 
+			cout << students[count].getName() << "\n";
+			cout << students[count].getId()<< "\n";;
+
 			//Increment count to target next student
 			count = count + 1;
 		}
@@ -46,4 +49,9 @@ int main() {
 	else {
 		cout << "Unable to open file";
 	}
+
+	Course new_course = Course("CP317");
+	cout << students[0].courseData.getLength();
+	students[0].courseData.insert(new_course);
+	cout << students[0].courseData.pop().getCourseCode();
 }

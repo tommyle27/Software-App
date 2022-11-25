@@ -6,7 +6,16 @@
 
 using namespace std;
 
-//Course Constructor
+//Student constructor
+Course::Course(string code, float t1, float t2, float t3, float t4) {
+    courseCode = code;
+    test1 = t1;
+    test2 = t2;
+    test3 = t3;
+    exam = t4;
+}
+
+//Set test values
 void Course::setTest(int testNum, float grade) {
     if(testNum == 1){
         test1 = grade;
