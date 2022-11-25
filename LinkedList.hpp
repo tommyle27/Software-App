@@ -21,11 +21,9 @@ class LinkedList {
         int length;
     public:
         LinkedList();
-        void traverse();
         void insert(Course course);
         Course pop();
         int getLength();
-        node search(string code);
 };
 
 #endif

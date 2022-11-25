@@ -47,7 +47,3 @@ Course LinkedList::pop() {
 int LinkedList::getLength() {
     return length;
 }
-
-node LinkedList::search(string code) {
-    return node();
-}

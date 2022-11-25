@@ -37,9 +37,6 @@ int main() {
 			result[1] = result[1].substr(1, result[1].length());
 			students[count].setName(result[1]);
 
-			cout << students[count].getName() << "\n";
-			cout << students[count].getId()<< "\n";;
-
 			//Increment count to target next student
 			count = count + 1;
 		}
@@ -50,8 +47,38 @@ int main() {
 		cout << "Unable to open file";
 	}
 
-	Course new_course = Course("CP317");
-	cout << students[0].courseData.getLength();
-	students[0].courseData.insert(new_course);
-	cout << students[0].courseData.pop().getCourseCode();
+	ifstream myfile2 ("CourseFile.txt");
+	if(myfile2.is_open()) {
+		while(getline (myfile2, line)) {
+			count = 0;
+			vector<string> result;
+			stringstream s_stream(line);
+			while(s_stream.good()) {
+				string substr;
+				getline(s_stream, substr, ',');
+				result.push_back(substr);
+			}
+			while(stoi(result[0]) != students[count].getId()) {
+				count = count + 1;
+			}
+			students[count].courseData.insert(Course(result[1].substr(1, result[1].length()), stof(result[2].substr(1, result[2].length())), stof(result[3].substr(1, result[3].length())),
+			stof(result[4].substr(1, result[4].length())), stof(result[5].substr(1, result[5].length()))));
+		}
+		myfile2.close();
+	}
+	else {
+		cout << "Unable to open file";
+	}
+
+	count = 0;
+	while(students[count].getId() != 0) {
+		cout << students[count].getId() << "\n";
+		cout << students[count].getName() << "\n";
+		Course tempCourse = students[count].courseData.pop();
+		while(tempCourse.getCourseCode() != "") {
+			cout << tempCourse.getCourseCode() << "\n";
+			tempCourse = students[count].courseData.pop();
+		}
+		count = count + 1;
+	}
 }
