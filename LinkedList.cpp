@@ -5,17 +5,20 @@
 
 using namespace std;
 
+//node constructor
 node::node(Course courseData) {
     data = courseData;
     next = NULL;
 }
 
+//Linked list constructor
 LinkedList::LinkedList() {
     length = 0;
     list_head = NULL;
     list_tail = NULL;
 }
 
+//Creates and inserts new node containing course data
 void LinkedList::insert(Course course) {
     node *new_node = new node(course);
     if(length == 0) {
@@ -30,6 +33,7 @@ void LinkedList::insert(Course course) {
     }
 }
 
+//Pops the node at the head of the list and returns that nodes course object
 Course LinkedList::pop() {
     if(length >= 1) {
         node *removed_node = nullptr;
@@ -44,6 +48,7 @@ Course LinkedList::pop() {
     }
 }
 
+//Returns linked list length
 int LinkedList::getLength() {
     return length;
 }

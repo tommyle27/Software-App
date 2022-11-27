@@ -32,7 +32,7 @@ void Course::setTest(int testNum, float grade) {
         exam = grade;
     }
     else{
-        std::cout << "Not a valid test number!";
+        cout << "Not a valid test number!";
     }
 
 }

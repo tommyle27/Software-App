@@ -7,6 +7,7 @@
 
 using namespace std;
 
+//Declare linked list only structure node
 struct node {
     public:
         node(Course courseData = Course());
@@ -15,6 +16,7 @@ struct node {
 };
 
 class LinkedList {
+    //Declare course variables and methods
     private:
         node *list_head;
         node *list_tail;
