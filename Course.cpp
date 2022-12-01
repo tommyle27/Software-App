@@ -6,7 +6,7 @@
 
 using namespace std;
 
-//Student constructor
+//Course constructor
 Course::Course(string code, float t1, float t2, float t3, float t4) {
     courseCode = code;
     test1 = t1;
