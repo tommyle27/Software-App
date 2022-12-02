@@ -44,6 +44,8 @@ Course LinkedList::pop() {
         return removed_node->data;
     }
     else {
+        cout << "Cannot remove from an empty list!";
+        exit(3);
         return Course();
     }
 }

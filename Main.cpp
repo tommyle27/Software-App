@@ -86,12 +86,16 @@ int main() {
 		count = 0;
 		while(students[count].getId() != 0) {
 			Course tempCourse = students[count].courseData.pop();
-			while(tempCourse.getCourseCode() != "") {
+			outputFile << students[count].getId() << ", ";
+			outputFile << students[count].getName() << ", ";
+			outputFile << tempCourse.getCourseCode() << ", ";
+			outputFile << tempCourse.overallGrade() << "\n";
+			while(students[count].courseData.getLength() != 0) {
+				tempCourse = students[count].courseData.pop();
 				outputFile << students[count].getId() << ", ";
 				outputFile << students[count].getName() << ", ";
 				outputFile << tempCourse.getCourseCode() << ", ";
 				outputFile << tempCourse.overallGrade() << "\n";
-				tempCourse = students[count].courseData.pop();
 			}
 		//increment count
 		count = count + 1;
