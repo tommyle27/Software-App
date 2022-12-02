@@ -97,4 +97,7 @@ int main() {
 		count = count + 1;
 		}
 	}
+	else {
+		cout << "Unable to create/access output file!";
+	}
 }
