@@ -104,7 +104,6 @@ int main() {
 				count = count + 1;
 			}
 			//Resulting vector is [0] = studentid, [1] = student name, [2] = test1, [3] = test2, [4] = test3, [5] = final
-			//Assign matched student with correct course data
 
 			//Checks if commas are valid
 			if(result.size() == 6) {
@@ -113,6 +112,26 @@ int main() {
 					cout << "Invalid Course codes";
 					exit(4);
 				}
+
+				//Check if test values are valid
+				if(result[2].substr(1, result[2].length()).length() > 2) {
+					cout << "Invalid test 1 values";
+					exit(4);
+				}
+				if(result[3].substr(1, result[3].length()).length() > 2) {
+					cout << "Invalid test 2 values";
+					exit(4);
+				}
+				if(result[4].substr(1, result[4].length()).length() > 2) {
+					cout << "Invalid test 3 values";
+					exit(4);
+				}
+				if(result[5].substr(1, result[5].length()).length() > 2) {
+					cout << "Invalid exam values";
+					exit(4);
+				}
+
+				//Assign matched student with correct course data
 				students[count].courseData.insert(Course(result[1].substr(1, result[1].length()), stof(result[2].substr(1, result[2].length())), stof(result[3].substr(1, result[3].length())),
 				stof(result[4].substr(1, result[4].length())), stof(result[5].substr(1, result[5].length()))));
 			}
