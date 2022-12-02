@@ -37,13 +37,19 @@ int main() {
 			}
 			//Resulting vector array is [0] = studentid, [1] = student name
 			//Assign substrings appropriately
-			students[count].setId(stoi(result[0]));
+			if(result.size() == 2) {
+				students[count].setId(stoi(result[0]));
 
-			result[1] = result[1].substr(1, result[1].length());
-			students[count].setName(result[1]);
+				result[1] = result[1].substr(1, result[1].length());
+				students[count].setName(result[1]);
 
-			//Increment count to target next student
-			count = count + 1;
+				//Increment count to target next student
+				count = count + 1;
+			}
+			else {
+				cout << "Invalid input for file 1";
+				exit(1);
+			}
 		}
 		//close file
 		myfile.close();
