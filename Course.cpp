@@ -38,7 +38,7 @@ void Course::setTest(int testNum, float grade) {
 }
 
 //Sets course code
-void Course::setCourseCode(string code){
+void Course::setCourseCode(string code) {
     courseCode = code;
 }
 
