@@ -80,8 +80,15 @@ int main() {
 			}
 			//Resulting vector array is [0] = studentid, [1] = student name, [2] = test1, [3] = test2, [4] = test3, [5] = final
 			//Assign matched student with correct course data
-			students[count].courseData.insert(Course(result[1].substr(1, result[1].length()), stof(result[2].substr(1, result[2].length())), stof(result[3].substr(1, result[3].length())),
-			stof(result[4].substr(1, result[4].length())), stof(result[5].substr(1, result[5].length()))));
+
+			if(result.size() == 6) {
+				students[count].courseData.insert(Course(result[1].substr(1, result[1].length()), stof(result[2].substr(1, result[2].length())), stof(result[3].substr(1, result[3].length())),
+				stof(result[4].substr(1, result[4].length())), stof(result[5].substr(1, result[5].length()))));
+			}
+			else {
+				cout << "Invalid input for file 2";
+				exit(1);
+			}
 		}
 		//close file
 		myfile2.close();
@@ -116,6 +123,7 @@ int main() {
 
 	else {
 		cout << "Unable to create/access output file!";
+		exit(2);
 	}
 
 	cout << "Data successfully formatted!";
