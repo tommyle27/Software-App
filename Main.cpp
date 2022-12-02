@@ -109,7 +109,7 @@ int main() {
 			//Checks if commas are valid
 			if(result.size() == 6) {
 				//Check if course codes are valid
-				if(result[1].length() > 6) {
+				if(result[1].substr(1, result[1].length()).length() > 6) {
 					cout << "Invalid Course codes";
 					exit(4);
 				}
