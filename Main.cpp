@@ -50,6 +50,7 @@ int main() {
 	}
 	else {
 		cout << "Unable to open file 1";
+		exit(2);
 	}
 
 	//Open second file to match ids and assign course values
@@ -81,6 +82,7 @@ int main() {
 	}
 	else {
 		cout << "Unable to open file 2";
+		exit(2);
 	}
 
 	//Create and open output file
@@ -105,7 +107,10 @@ int main() {
 		count = count + 1;
 		}
 	}
+
 	else {
 		cout << "Unable to create/access output file!";
 	}
+
+	cout << "Data successfully formatted!";
 }
