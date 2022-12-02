@@ -13,9 +13,13 @@ using namespace std;
 
 int main() {
 	//Initialize variables
-	string line;
-	ifstream myfile ("NameFile.txt");
-	Student *students = new Student[50];
+	string line, file1, file2;
+	cout << "Enter the first filename: ";
+	cin >> file1;
+	cout << "Enter the second filename: ";
+	cin >> file2;
+	ifstream myfile (file1);
+	Student *students = new Student[100];
 	int count = 0;
 
 	//Open first file to read student names and ids
@@ -45,11 +49,11 @@ int main() {
 		myfile.close();
 	}
 	else {
-		cout << "Unable to open file";
+		cout << "Unable to open file 1";
 	}
 
 	//Open second file to match ids and assign course values
-	ifstream myfile2 ("CourseFile.txt");
+	ifstream myfile2 (file2);
 	if(myfile2.is_open()) {
 		//Iterate through file line by line
 		while(getline (myfile2, line)) {
@@ -76,7 +80,7 @@ int main() {
 		myfile2.close();
 	}
 	else {
-		cout << "Unable to open file";
+		cout << "Unable to open file 2";
 	}
 
 	//Create and open output file
